@@ -1,0 +1,24 @@
+Metric,2019,2020,2021,2022,2023,Company_name
+Net income,-775,862,5644,12587,14974,Tesla
+Net income,39240,44281,61271,72738,72361,Microsoft
+Net income,55256,57411,94680,99803,96995,Apple
+Inventories,3552,4101,5757,12839,13626,Tesla
+Total current assets,12103,26717,27100,40917,49616,Tesla
+Total assets,34309,52148,62131,82338,106618,Tesla
+Total current liabilities,10667,14248,19705,26709,28748,Tesla
+Total liabilities,26199,28418,30548,36440,43009,Tesla
+Total stockholders' equity,6618,22225,30189,44704,62634,Tesla
+Total liabilities and equity,34309,52148,62131,82338,106618,Tesla
+Inventories,2063,1895,2636,3742,2500,Microsoft
+Total current assets,175552,181915,184406,169684,184257,Microsoft
+Total assets,286556,301311,333779,364840,411976,Microsoft
+Total current liabilities,69420,72310,88657,95082,104149,Microsoft
+Total liabilities,184226,183007,191791,198298,205753,Microsoft
+Total stockholders' equity,102330,118304,141988,166542,206223,Microsoft
+Inventories,4106,4061,6580,4946,6331,Apple
+Total current assets,162819,143713,134836,135405,143566,Apple
+Total assets,338516,323888,351002,352755,352583,Apple
+Total current liabilities,105718,105392,125481,153982,145308,Apple
+Total liabilities,248028,258549,287912,302083,290437,Apple
+Total stockholders' equity,90488,65339,63090,50672,62146,Apple
+Total liabilities and shareholders’ equity,338516,323888,351002,352755,352583,Apple
