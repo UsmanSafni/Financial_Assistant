@@ -1,6 +1,7 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
 from langchain.agents import create_tool_calling_agent, AgentExecutor
+from langchain.prompts import SystemMessagePromptTemplate, PromptTemplate
 from langchain import hub
 from .fn_tools import liquidity, solvency, profitability,income_growth
 import os
@@ -18,7 +19,24 @@ class LangChainAgent:
 
         self.llm = ChatOpenAI(model="gpt-3.5-turbo-0125")
         self.tools = [liquidity, solvency, profitability, income_growth]  # Placeholder for your tools
-        self.prompt =hub.pull("hwchase17/openai-tools-agent")
+        self.prompt = hub.pull("hwchase17/openai-tools-agent")
+        
+        # Modify the system prompt part only
+        new_system_prompt = SystemMessagePromptTemplate(
+            prompt=PromptTemplate(
+                input_variables=[], 
+                template=(
+                    'You are a financial analysis assistant designed for SEC analysts, '
+                    'equipped with tools to evaluate liquidity, profitability, solvency, and year-over-year income changes. '
+                    'Your task is to analyze relevant financial ratios and provide concise, accurate financial overviews of companies based on these metrics. '
+                    'Always maintain a professional, clear, and precise tone. '
+                    'If you do not know the answer, state that you do not know.'
+                )
+            )
+        )
+
+        # Replace the system prompt in the original prompt template
+        self.prompt.messages[0] = new_system_prompt
         # Bind the LLM with the provided tools
         self.llm_with_tools = self.llm.bind_tools([])  # Currently no tools to bind
         self.agent = create_tool_calling_agent(self.llm, self.tools, self.prompt)
