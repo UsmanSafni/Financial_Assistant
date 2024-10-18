@@ -1,7 +1,7 @@
 # Financial ChatBot Assistant
 
 ## Overview
-The Financial ChatBot Assistant is a professional tool designed to guide users through financial metrics and analytics. It leverages natural language processing (NLP) and data visualization to provide insights and visualizations based on user queries.
+The Financial ChatBot Assistant is a professional tool designed to guide users through financial metrics and analytics. It leverages Langchain's tool calling agent and data visualization to provide insights and visualizations based on user queries.
 
 ## Features
 1. **Interactive ChatBot**: Users can interact with the bot to ask questions about various financial metrics such as liquidity ratios, solvency ratios, profitability metrics, etc.
@@ -11,7 +11,7 @@ The Financial ChatBot Assistant is a professional tool designed to guide users t
 To use this application, ensure you have Python installed. Then, install the required dependencies using pip:
 
 ```bash
-pip install gradio langchain pandas matplotlib
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ pip install gradio langchain pandas matplotlib
 2. Run the script:
 
 ```bash
-python financial_chatbot.py
+python app.py
 ```
 
 This will start a Gradio interface where you can interact with the Financial ChatBot Assistant.
@@ -45,9 +45,3 @@ Generates and returns a plot based on the selected plot type and company name.
 ## Contributing
 Contributions are welcome! Please fork the repository and submit pull requests.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README provides a comprehensive overview of the Financial ChatBot Assistant, its features, installation instructions, usage, and contribution guidelines.
