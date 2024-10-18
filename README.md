@@ -7,7 +7,7 @@ The Financial ChatBot Assistant is a professional tool designed to guide users t
 1. **Interactive ChatBot**: Users can interact with the bot to ask questions about various financial metrics such as liquidity ratios, solvency ratios, profitability metrics, etc.
 2. **Financial Ratios Plots**: Generate visual representations of financial ratios for selected companies. Available plots include Liquidity Ratios, Solvency Ratios, Profitability Ratios, and Income Growth.
 ![image](https://github.com/user-attachments/assets/42cac309-0bc8-4412-895d-c1bc339a63e7)
-
+*Figure 1: Langchain's tool calling agent*
 
 ## Installation
 To use this application, first create a new conda environmnet with python==3.12. Then, install the required dependencies using pip:
