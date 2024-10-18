@@ -29,8 +29,9 @@ python app.py
 
 This will start a Gradio interface where you can interact with the Financial ChatBot Assistant.
 ## Application flow
-The agent in our pipeline will have a set of tools at its disposal that it can use to answer a user query. The Large Language Model (LLM) serves as the “brain” of the agent, guiding its decisions. When a user submits a question, the agent uses the LLM to select the most appropriate tool or a combination of tools to provide an answer. If the agent determines it needs multiple tools, it will also specify the order in which the tools are used. The agentic flow is depicted below:
+The agent in our pipeline will have a set of tools at its disposal that it can use to answer a user query. The Large Language Model (LLM) serves as the “brain” of the agent, guiding its decisions. When a user submits a question, the agent uses the LLM to select the most appropriate tool or a combination of tools to provide an answer. If the agent determines it needs multiple tools, it will also specify the order in which the tools are used.
 ![image](https://github.com/user-attachments/assets/ebda33fa-21e5-4ff3-9607-058b6fb067f3)
+
 *Agentic flow*
 
 ## Components
