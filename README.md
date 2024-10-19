@@ -61,6 +61,11 @@ Loads the dataset and reads it as a dataframe.
 ### generate_plot Function
 Generates and returns a plot based on the selected plot type and company name.
 
+## Demo
+You can check out the live demo here:
+
+[Financial Assistant Demo](https://huggingface.co/spaces/Safni/Financial_assistant)
+
 ## Contributions
 Contributions are welcome! Please fork the repository and submit pull requests.
 
