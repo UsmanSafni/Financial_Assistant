@@ -52,9 +52,15 @@ The main class responsible for building and launching the Gradio application.
 ### LangChainAgent Class
 Handles the logic for generating responses to user queries related to financial metrics.
 
+### FinancialCalculator Class
+Extracts financial metrics and calculates ratios.
+
+### DataLoader Class
+Loads the dataset and reads it as a dataframe.
+
 ### generate_plot Function
 Generates and returns a plot based on the selected plot type and company name.
 
-## Contributing
+## Contributions
 Contributions are welcome! Please fork the repository and submit pull requests.
 
