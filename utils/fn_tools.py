@@ -9,14 +9,10 @@ def liquidity(company_name):
     """Provide liquidity trends and analysis for the given company(give the company name in Title Case)"""
 
     ratios= FinancialCalculator(company_name)
-# Combine into a single DataFrame for plotting
     liquidity_ratios = pd.DataFrame({
-        #'Year/Quarter': years_quarters,
         'Current Ratio': ratios.current_ratio,
         'Quick Ratio': ratios.quick_ratio
     })
-
-
     return liquidity_ratios
 
 @tool
@@ -24,9 +20,7 @@ def solvency(company_name):
     """Provide solvency trends and analysis for the given company(give the company name in Title Case)"""
 
     ratios= FinancialCalculator(company_name)
-# Combine into a single DataFrame for plotting
     solvency_ratios = pd.DataFrame({
-        #'Year/Quarter': years_quarters,
         'Debt to Equity Ratio': ratios.debt_equity_ratio,
         'Debt to Assets Ratio': ratios.debt_assets_ratio
     })
@@ -37,9 +31,7 @@ def profitability(company_name):
     """Provide profitability trends and analysis for the given comapny(give the company name in Title Case)"""
 
     ratios= FinancialCalculator(company_name)
-# Combine into a single DataFrame for plotting
     profitability_ratios = pd.DataFrame({
-        #'Year/Quarter': years_quarters,
         'Return on Assets (ROA)': ratios.return_assets,
         'Return on Equity (ROE)': ratios.return_equity
     })
@@ -47,7 +39,7 @@ def profitability(company_name):
 
 @tool
 def income_growth(company_name):
-    """Provide revenue growth/contraction analysis for the given company(give the company name in Title Case) """
+    """Provide income growth/contraction analysis for the given company(give the company name in Title Case) """
     metric= FinancialCalculator(company_name)
             
     return metric.income_pct_change

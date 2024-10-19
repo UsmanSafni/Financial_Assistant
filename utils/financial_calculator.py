@@ -17,7 +17,7 @@ class FinancialCalculator:
         self.ratios = self.calculate_ratios()
 
     def extract_financial_metrics(self):
-        # Extract metrics with a helper function to streamline repetitive tasks
+        # Extract metrics
         self.current_assets = self.extract_metric('Total current assets')
         self.current_liabilities = self.extract_metric('Total current liabilities')
         self.inventories = self.extract_metric('Inventories')
@@ -52,24 +52,14 @@ class FinancialCalculator:
         return self.ratios
 
     def calculate_net_income_pct_change(self):
-    # Extract Net Income row for the given company
+        # Extract Net Income row for the given company
         net_income_row = self.company_df[self.company_df['Metric'] == 'Net income']
-    
-    # Skip the 'Metric' and 'Company_name' columns, keeping only the years' data
-        self.net_income = net_income_row.iloc[0, 1:-1]  # Exclude 'Metric' and 'Company_name'
-    
-    # Convert Net Income to numeric (in case some values are not numeric)
+        # Skip the 'Metric' and 'Company_name' columns, keeping only the years' data
+        self.net_income = net_income_row.iloc[0, 1:-1] 
+        # Convert Net Income to numeric
         self.net_income = pd.to_numeric(self.net_income, errors='coerce')
-    
-    # Calculate the year-over-year percentage change
-        self.income_pct_change = self.net_income.pct_change() * 100  # Percentage change calculation
-    
-    # Create a DataFrame to store the percentage change
-        #years = self.company_df.columns[1:-1]  # Skip 'Metric' and 'Company_name'
-        #self.income_pct_change_df = pd.DataFrame({
-        #'Year': years,
-        #'Net Income Pct Change': self.income_pct_change
-        #})
+        # Calculate the year-over-year percentage change
+        self.income_pct_change = self.net_income.pct_change() * 100  
         return self.income_pct_change
 
 

@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from .financial_calculator import FinancialCalculator
 
-#
 def generate_plot(plot_type,company_name):
     metrics=FinancialCalculator(company_name)
     plt.figure(figsize=(10, 6))
