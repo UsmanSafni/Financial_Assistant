@@ -41,11 +41,13 @@ class LangChainAgent:
 
     def chat_bot(self, user_input):
         # Use the agent executor to handle user input
-        response = self.agent_executor.invoke(
-            {
+        try:
+            response = self.agent_executor.invoke(
+              {
                 "input": user_input
-            }
-        )
-        answer = response['output']
-        return answer
+              })
+            answer = response['output']
+            return answer
+        except Exception as e:
+          return "Hey, I am your financial assistant to help you with the above listed companies. Please go through the instructions before use."
 

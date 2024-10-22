@@ -24,7 +24,20 @@ class FinancialChatBotApp:
         """Create and return the chatbot section (UI elements)."""
         with gr.Column(scale=1):
             gr.Markdown("### ChatBot Section")
+            gr.Markdown("""
+              <h4><i>Instructions for Use</i></h4>
 
+              <p style="font-size:10px; font-style:italic;">
+              This financial assistant offers insights into key financial ratios and metrics, including:
+              <br>
+              - <b>Liquidity</b><br>
+              - <b>Solvency</b><br>
+              - <b>Profitability</b><br>
+              - Year-over-year changes in <b>Net Income</b><br>
+              You can ask questions related to these metrics for three US SEC-listed companies: <b>Microsoft</b>, <b>Apple</b>, and <b>Tesla</b>.
+              Additionally, you can view the corresponding plots to get a visual representation of the data.
+              </p>
+              """)
             # Input textbox for user queries
             user_input = gr.Textbox(
                 label="Enter your query",
