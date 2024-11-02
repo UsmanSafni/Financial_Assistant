@@ -17,7 +17,6 @@ The Financial ChatBot Assistant is a professional tool designed to guide users t
 ```bash
 conda create -p venv python=3.12
 conda activate venv/
-pip install -r requirements.txt
 ```
 2. Install Dependencies: Install the required dependencies using pip:
 
