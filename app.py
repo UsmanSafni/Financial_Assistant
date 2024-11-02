@@ -28,28 +28,53 @@ class FinancialChatBotApp:
               <h4><i>Instructions for Use</i></h4>
 
               <p style="font-size:10px; font-style:italic;">
-              This financial assistant offers insights into key financial ratios and metrics, including:
+              This chatbot section offers insights into key financial ratios and metrics, including:
               <br>
               - <b>Liquidity</b><br>
               - <b>Solvency</b><br>
               - <b>Profitability</b><br>
               - Year-over-year changes in <b>Net Income</b><br>
               You can ask questions related to these metrics for three US SEC-listed companies: <b>Microsoft</b>, <b>Apple</b>, and <b>Tesla</b>.
-              Additionally, you can view the corresponding plots to get a visual representation of the data.
+            
               </p>
               """)
+            
+            
+
+
             # Input textbox for user queries
             user_input = gr.Textbox(
                 label="Enter your query",
                 placeholder="Ask about liquidity, solvency, profitability metrics, etc.",
                 elem_id="user_input"
             )
-
+            
             # Button for submitting user query
             submit_btn = gr.Button("Submit", elem_id="submit_button")
 
+
             # Output textbox for chatbot response
             output_text = gr.Textbox(label="Chatbot Response", elem_id="chatbot_response")
+
+            # Add sample questions section
+            gr.Markdown("<h4>Sample Questions:</h4>")
+            sample_questions = [
+                "Please give your insights about profitability of Microsoft?",
+                "Which among these, apple or tesla performs better?",
+                "What is your take on Microsoft's financial growth?",
+                "Which among these companies , microsoft, tesla, apple has the highest liquidity?",
+                "Which among these companies, Microsoft, tesla, apple is good to invest now?"
+
+            ]
+
+             # Create buttons for sample questions and link them to the user_input
+            for question in sample_questions:
+                gr.Button(question).click(
+                    fn=lambda q=question: (q, self.lang_chain_agent.chat_bot(q)),
+                    inputs=[],
+                    outputs=[user_input, output_text]
+                )
+            
 
             # Connect the button to the chatbot function
             submit_btn.click(
@@ -62,6 +87,20 @@ class FinancialChatBotApp:
         """Create and return the plot section (UI elements)."""
         with gr.Column(scale=1):
             gr.Markdown("### Financial Ratios Plots Section")
+
+            gr.Markdown("""
+              <h4><i>Instructions for Use</i></h4>
+
+              <p style="font-size:10px; font-style:italic;">
+              This plot section offers visual representation into key financial ratios and metrics from 2019 to 2023, including:
+              <br>
+              - <b>Liquidity</b><br>
+              - <b>Solvency</b><br>
+              - <b>Profitability</b><br>
+              - Year-over-year changes in <b>Net Income</b><br>
+              You can choose the plot type and company to get a visual representation of the data.
+              </p>
+              """)
 
             with gr.Row():
                 # Dropdown for selecting plot type
