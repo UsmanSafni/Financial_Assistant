@@ -11,16 +11,30 @@ The Financial ChatBot Assistant is a professional tool designed to guide users t
 
 *Langchain's tool calling agent*
 
-## Installation
-To use this application, first create a new conda environmnet with python==3.12. Then, install the required dependencies using pip:
+## Installation Guide
+1. Create a Conda Environment: Start by creating a new Conda environment with Python 3.12:
 
 ```bash
 conda create -p venv python=3.12
 conda activate venv/
 pip install -r requirements.txt
 ```
+2. Install Dependencies: Install the required dependencies using pip:
 
-Sign up at OpenAI and obtain your own key to start making calls to the gpt model. Once you have the key, create a .env file in your repository and store the OpenAI key. similarly obtain your Langsmith Key and store in the .env file.
+```bash
+pip install -r requirements.txt
+```
+3. Obtain API Keys:
+
+OpenAI Key: Sign up at OpenAI and obtain your API key for GPT model access.
+LangSmith Key: Similarly, obtain your LangSmith API key.
+
+4. Set Up Environment Variables: Create a .env file in your project root directory and add the following:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key
+LANGSMITH_API_KEY=your_langsmith_api_key
+```
 
 ## Usage
 Run the script:
@@ -31,7 +45,7 @@ python app.py
 
 This will start a Gradio interface where you can interact with the Financial ChatBot Assistant.
 ## Application flow
-The agent in our pipeline will have a set of tools at its disposal that it can use to answer a user query. The Large Language Model (LLM) serves as the “brain” of the agent, guiding its decisions. When a user submits a question, the agent uses the LLM to select the most appropriate tool or a combination of tools to provide an answer. If the agent determines it needs multiple tools, it will also specify the order in which the tools are used.
+The agent in our pipeline is equipped with a variety of tools to respond to user queries. The Large Language Model (LLM) acts as the "brain" of the agent, directing its decision-making process. When a user submits a question, the LLM helps the agent choose the most suitable tool or combination of tools to generate an answer. If multiple tools are needed, the agent will determine the appropriate sequence for using them.
 
 ![image](https://github.com/user-attachments/assets/ebda33fa-21e5-4ff3-9607-058b6fb067f3)
 
