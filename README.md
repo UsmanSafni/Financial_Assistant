@@ -46,7 +46,7 @@ This will start a Gradio interface where you can interact with the Financial Cha
 ## Application flow
 The agent in our pipeline is equipped with a variety of tools to respond to user queries. The Large Language Model (LLM) acts as the "brain" of the agent, directing its decision-making process. When a user submits a question, the LLM helps the agent choose the most suitable tool or combination of tools to generate an answer. If multiple tools are needed, the agent will determine the appropriate sequence for using them.
 
-![image](https://github.com/user-attachments/assets/ebda33fa-21e5-4ff3-9607-058b6fb067f3)
+![alt text](image.png)
 
 *Agentic flow*
 
