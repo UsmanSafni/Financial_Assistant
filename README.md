@@ -1,11 +1,17 @@
 # Financial ChatBot Assistant
 
-## Overview
-The Financial ChatBot Assistant is a professional tool designed to guide users through financial metrics and analytics. It leverages Langchain's tool calling agent and data visualization to provide insights and visualizations based on user queries.
+## Description
+The Financial ChatBot Assistant is an interactive tool designed to simplify and enhance financial analysis. By leveraging LangChain's tool-calling agent and data visualization capabilities, the chatbot provides insightful responses and visualizations for key financial metrics. The system currently supports queries related to three US SEC-listed companies: Microsoft, Apple, and Tesla, offering detailed insights into liquidity, solvency, profitability, and income growth.
+
+## Problem Statement
+Understanding and analyzing financial metrics is a complex and time-consuming task, especially for non-experts. Traditional methods of analyzing financial data often lack interactivity and require advanced technical skills to generate insights and visualizations. This project addresses these challenges by combining the capabilities of Large Language Models (LLMs) with automated tool selection and visualization, creating a user-friendly platform for financial analysis.
 
 ## Features
-1. **Interactive ChatBot**: Users can interact with the bot to ask questions about various financial metrics such as liquidity ratios, solvency ratios, profitability metrics, etc.
-2. **Financial Ratios Plots**: Generate visual representations of financial ratios for selected companies. Available plots include Liquidity Ratios, Solvency Ratios, Profitability Ratios, and Income Growth.
+- **Interactive ChatBot**: Query financial metrics like liquidity ratios, solvency ratios, and profitability metrics.
+- **Financial Ratio Plots**: Generate visual representations of financial data, including Liquidity Ratios, Solvency Ratios, Profitability Ratios, and Income Growth.
+- **Dynamic Tool Selection**: LangChain's tool-calling agent selects and sequences tools dynamically to generate accurate responses.
+- **Data Visualization**: Seamlessly integrate financial metrics with visually appealing graphs.
+
    
 ![image](https://github.com/user-attachments/assets/42cac309-0bc8-4412-895d-c1bc339a63e7)
 
